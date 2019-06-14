@@ -1,7 +1,7 @@
 public class QuickSort{
 
 	public static void main(String[] args){
-		int[] array = new int[]{ 10, 4, 213, 5, 6236, 51, 2, 56, 7, 7, 6 };
+		// int[] array = new int[]{ 10, 4, 213, 5, 6236, 51, 2, 56, 7, 7, 6 };quickSort(array, 0,  3);
 
 		// int[] array = new int[]{ 10, 4, 6, 5, 6236, 51, 2, 56, 7, 7,  213};
 
@@ -9,12 +9,13 @@ public class QuickSort{
 
 		// int[] array = new int[]{ 10, 4, 6, 5, 7, 7, 2, 56, 51, 6236,  213};
 		
-
-		// int[] array = new int[]{ 4,7,6,5,3,2,8,1 };
-
-		quickSort(array, 0,  array.length-1);
-		
+		quickSort(new int[]{ 4,7,6,5,3,2,8,1 });
 		// printArray(array);
+	}
+
+	public static void quickSort(int[] array){
+		quickSort(array, 0,  array.length-1);
+		printArray(array);
 	}
 
 	public static void quickSort(int[] array, int start, int end){
@@ -56,8 +57,10 @@ public class QuickSort{
 			}
 
 		}
-		printArray(array);
 
+		// printArray(array);
+
+		// System.out.println("start = "+start + " end =  "+end);
 		if(pStart < start){
 			quickSort(array, pStart,  start - 1);	
 		}
