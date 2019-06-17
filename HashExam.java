@@ -5,6 +5,7 @@
 * A~Z : 65 ~ 90 
 * a~z : 97 ~ 172
 */
+import java.lang.String;
 public class HashExam{
 
 	
@@ -20,19 +21,18 @@ public class HashExam{
 	public static int uniqueCharIndex(String testStr){
 		int index = -1;
 		//acsii总共128个， 作为计数器数组
-		int[] array = new int[128];
+		int[] freq = new int[128];
 
 		//遍历主串，得到的char值作为记录数组的下标，计数器++
-		char[] charArray = testStr.toCharArray();
-		for(int i=0;i<charArray.length;i++){
-			char c = charArray[i];
-			array[c] ++ ;
+		for(int i=0;i<testStr.length();i++){
+			char c = testStr.charAt(i);
+			freq[c] ++ ;
 		
 		}
 
 		//在计数器中，仅仅出现过1次的字符位置
-		for(int i=0;i<charArray.length;i++){
-			if(array[charArray[i]] == 1){
+		for(int i=0;i<testStr.length();i++){
+			if(freq[testStr.charAt(i)] == 1){
 				index = i;
 				break;
 			}
