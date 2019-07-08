@@ -24,7 +24,7 @@ public class SelectionSort{
 
 		}
 		if(array[minPosition] != array[index] ){
-			// System.out.println("交换："+array[minPosition] +" 和 "+ array[index]);
+			System.out.println("交换："+array[minPosition] +" 和 "+ array[index]);
 			int temp = array[index];
 			array[index] = array[minPosition];
 			array[minPosition] = temp;	
