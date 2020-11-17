@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
      */
     external fun stringFromJNI(): String
     external fun quicksortFromJNI(): String
-
+    external fun quicksortTestFromJNI(intArray: IntArray): IntArray
     companion object {
         // Used to load the 'native-lib' library on application startup.
         init {
