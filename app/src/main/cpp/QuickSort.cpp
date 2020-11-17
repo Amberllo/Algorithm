@@ -1,7 +1,18 @@
 #include <iostream>
 #include <stdio.h>
+#include <jni.h>
+#include <string>
+
 using namespace std;
 
+
+extern "C" JNIEXPORT jstring JNICALL
+Java_com_example_ndkapplication_MainActivity_quicksortFromJNI(
+		JNIEnv* env,
+		jobject /* this */) {
+	std::string hello = "QuickSort from C++";
+	return env->NewStringUTF(hello.c_str());
+}
 
 /**
 * 快速排序：C++ 实现
@@ -15,7 +26,7 @@ using namespace std;
 * 
 * 平均时间复杂度 ： O(nlogn),  最坏情况：每一轮基准值都是最大、最小值，O(n2)
 */
-void printfArray(int array[],int length){
+void printfArray(int array[], int length){
 
 	for(int i=0;i<length; i++){
 		printf("%d,", array[i]);

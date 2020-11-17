@@ -1,4 +1,6 @@
- /**
+package com.example.ndkapplication;
+
+/**
  * 选择排序算法
  * 每次从数组中，选择最小的元素，放在数组的顶端，index+1进行递归
  * 时间复杂度:  O( n + (n-1)+(n-2)+... 0 ) = O( n(n-1)/2 )

@@ -1,3 +1,4 @@
+package com.example.ndkapplication;
 /**
 * 该算法，求字符串中第一个不重复字符的位置，不存在返回-1
 * ascii :  
